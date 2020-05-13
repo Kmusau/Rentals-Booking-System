@@ -18,23 +18,26 @@ public class controller {
 
 	@Autowired
 	CustomersService Cservice;
+	
+	@Autowired
 	HousesService Hservice;
 	
-	@GetMapping("/allcustomers")
+	
+	
+	@GetMapping("/customers/fetch")
 	public List<Customers> getAllCustomers() {
 		return Cservice.getAllCustomers();
 	}
 	
-	@PostMapping("/addcustomer")
+	@PostMapping("/customers/create")
 	public List<Customers> addCustomer(@RequestBody Customers customer) {
 		Cservice.addCustomer(customer);
 		return Cservice.getAllCustomers();
 	}
 	
-	@GetMapping("/allrentals")
-	public List<Houses> getAllHouses() {
-		return Hservice.getAllHouses();
-		
+	@GetMapping("/houses/fetch")
+	public List<Houses> get() {
+		return Hservice.get();
 	}
 
 }

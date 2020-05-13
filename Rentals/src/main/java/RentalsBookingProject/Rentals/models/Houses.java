@@ -3,59 +3,82 @@ package RentalsBookingProject.Rentals.models;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
-@Table(name = "houses")
 public class Houses {
 
 	@Id
-	@Column(name = "name")
+	@Column(name="idhouse")
+	private int id;
+	@Column(name="name")
 	private String name;
-	@Column(name = "location")
+	@Column(name="location")
 	private String location;
-	@Column(name = "distance_from")
-	private String distanceFrom;
-	@Column(name = "rent p/m")
-	private int rent;
-	@Column(name = "type")
+	@Column(name="distanceKM")
+	private int distance;
+	@Column(name="rent")
+	private float rent;
+	@Column(name="type")
 	private String type;
 	
 	
 	public Houses() {
 		super();
 	}
-	
-	
+
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	
 	public String getLocation() {
 		return location;
 	}
+
 	public void setLocation(String location) {
 		this.location = location;
 	}
-	public String getDistanceFrom() {
-		return distanceFrom;
+
+
+	public int getDistance() {
+		return distance;
 	}
-	public void setDistanceFrom(String distanceFrom) {
-		this.distanceFrom = distanceFrom;
+
+	public void setDistance(int distance) {
+		this.distance = distance;
 	}
-	public int getRent() {
+
+
+	public float getRent() {
 		return rent;
 	}
-	public void setRent(int rent) {
+
+	public void setRent(float rent) {
 		this.rent = rent;
 	}
+
+
 	public String getType() {
 		return type;
 	}
+
 	public void setType(String type) {
 		this.type = type;
 	}
+	
 	
 }

@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import RentalsBookingProject.Rentals.models.Houses;
 
-public interface HouseRepository extends JpaRepository<Houses, String> {
+public interface HouseRepository extends JpaRepository<Houses, Integer> {
 
 }
