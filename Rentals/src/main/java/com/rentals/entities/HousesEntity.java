@@ -1,11 +1,11 @@
-package com.rentals.models;
+package com.rentals.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Houses {
+public class HousesEntity {
 
 	@Id
 	@Column(name="idhouse")
@@ -22,7 +22,7 @@ public class Houses {
 	private String type;
 	
 	
-	public Houses() {
+	public HousesEntity() {
 		super();
 	}
 

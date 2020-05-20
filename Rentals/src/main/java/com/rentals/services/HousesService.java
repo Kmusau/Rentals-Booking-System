@@ -2,7 +2,7 @@ package com.rentals.services;
 
 import java.util.List;
 
-import com.rentals.models.Houses;
+import com.rentals.entities.HousesEntity;
 import com.rentals.repositories.HouseRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,7 +17,7 @@ public class HousesService {
 	@Autowired
 	HouseRepository houseRepo;
 	
-	public List<Houses> getAllHouses() {
+	public List<HousesEntity> getAllHouses() {
 		//logging information
 	/*	logger.debug("debug message for fetching all houses");
 		logger.error("error message for fetching all houses"); */

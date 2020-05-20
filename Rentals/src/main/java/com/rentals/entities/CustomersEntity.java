@@ -1,4 +1,4 @@
-package com.rentals.models;
+package com.rentals.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -7,7 +7,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "customers")
-public class Customers {
+public class CustomersEntity {
 
 	@Id
 	@Column(name = "idnumber")
@@ -24,7 +24,7 @@ public class Customers {
 	private int phonenumber;
 	
 	
-	public Customers() {
+	public CustomersEntity() {
 		super();
 	}
 	

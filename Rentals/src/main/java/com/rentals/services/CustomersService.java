@@ -2,7 +2,7 @@ package com.rentals.services;
 
 import java.util.List;
 
-import com.rentals.models.Customers;
+import com.rentals.entities.CustomersEntity;
 import com.rentals.repositories.CustomerRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,7 +17,7 @@ public class CustomersService {
 	@Autowired
 	CustomerRepository customerrepo;
 	
-	public List<Customers> getAllCustomers() {
+	public List<CustomersEntity> getAllCustomers() {
 		//logging information
 	/*	logger.debug("debug message for fetching all customers");
 		logger.error("error message for fetching all customers"); */
@@ -27,7 +27,7 @@ public class CustomersService {
 		return customerrepo.findAll();
 	}
 
-	public void addCustomer(Customers customer) {
+	public void addCustomer(CustomersEntity customer) {
 		//logging information
 	/*	logger.debug("debug message for creating a new customer");
 		logger.error("error message for creating a new customer");  */
