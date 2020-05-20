@@ -1,4 +1,4 @@
-package RentalsBookingProject.Rentals.models;
+package com.rentals.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,8 +1,7 @@
-package RentalsBookingProject.Rentals.repositories;
+package com.rentals.repositories;
 
+import com.rentals.models.Houses;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import RentalsBookingProject.Rentals.models.Houses;
 
 public interface HouseRepository extends JpaRepository<Houses, Integer> {
 

@@ -1,14 +1,13 @@
-package RentalsBookingProject.Rentals.services;
+package com.rentals.services;
 
 import java.util.List;
 
+import com.rentals.models.Customers;
+import com.rentals.repositories.CustomerRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import RentalsBookingProject.Rentals.models.Customers;
-import RentalsBookingProject.Rentals.repositories.CustomerRepository;
 
 @Service
 public class CustomersService {

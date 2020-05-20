@@ -1,14 +1,13 @@
-package RentalsBookingProject.Rentals.services;
+package com.rentals.services;
 
 import java.util.List;
 
+import com.rentals.models.Houses;
+import com.rentals.repositories.HouseRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import RentalsBookingProject.Rentals.models.Houses;
-import RentalsBookingProject.Rentals.repositories.HouseRepository;
 
 @Service
 public class HousesService {
@@ -18,7 +17,7 @@ public class HousesService {
 	@Autowired
 	HouseRepository houseRepo;
 	
-	public List<Houses> get() {
+	public List<Houses> getAllHouses() {
 		//logging information
 	/*	logger.debug("debug message for fetching all houses");
 		logger.error("error message for fetching all houses"); */
