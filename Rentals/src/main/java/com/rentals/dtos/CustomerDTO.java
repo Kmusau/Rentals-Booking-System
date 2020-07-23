@@ -1,77 +1,85 @@
 package com.rentals.dtos;
 
-/**
- * Created by sylvester
- * Project Rentals-Booking-System
- * User: sylvester
- * Date: 5/20/20
- * Time: 6:46 PM
- */
+import java.util.Date;
+
 public class CustomerDTO {
-    private int idNumber;
-    private String password;
-    private String email;
-    private String fname;
-    private String lname;
-    private int phoneNumber;
+    private int customersID;
+    private String firstName;
+    private String otherNames;
+    private String emailAddress;
+    private Date dateOfBirth; 
+    private Date dateCreated;
+    private Date dateModified;
+    private int active;
+    
+    
+	public CustomerDTO() {
+		
+	}
 
-    public CustomerDTO() {
-    }
 
-    public CustomerDTO(int idNumber, String password, String email, String fname, String lname, int phoneNumber) {
-        this.idNumber = idNumber;
-        this.password = password;
-        this.email = email;
-        this.fname = fname;
-        this.lname = lname;
-        this.phoneNumber = phoneNumber;
-    }
-
-    public int getIdNumber() {
-        return idNumber;
-    }
-
-    public void setIdNumber(int idNumber) {
-        this.idNumber = idNumber;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getFname() {
-        return fname;
-    }
-
-    public void setFname(String fname) {
-        this.fname = fname;
-    }
-
-    public String getLname() {
-        return lname;
-    }
-
-    public void setLname(String lname) {
-        this.lname = lname;
-    }
-
-    public int getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(int phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
+	public CustomerDTO(int customersID, String firstName, String otherNames, String emailAddress, Date dateOfBirth,
+			Date dateCreated, Date dateModified, int active) {
+		super();
+		this.customersID = customersID;
+		this.firstName = firstName;
+		this.otherNames = otherNames;
+		this.emailAddress = emailAddress;
+		this.dateOfBirth = dateOfBirth;
+		this.dateCreated = dateCreated;
+		this.dateModified = dateModified;
+		this.active = active;
+	}
+	
+	
+	public int getCustomersID() {
+		return customersID;
+	}
+	public void setCustomersID(int customersID) {
+		this.customersID = customersID;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getOtherNames() {
+		return otherNames;
+	}
+	public void setOtherNames(String otherNames) {
+		this.otherNames = otherNames;
+	}
+	public String getEmailAddress() {
+		return emailAddress;
+	}
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
+	}
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+	public Date getDateCreated() {
+		return dateCreated;
+	}
+	public void setDateCreated(Date dateCreated) {
+		this.dateCreated = dateCreated;
+	}
+	public Date getDateModified() {
+		return dateModified;
+	}
+	public void setDateModified(Date dateModified) {
+		this.dateModified = dateModified;
+	}
+	public int getActive() {
+		return active;
+	}
+	public void setActive(int active) {
+		this.active = active;
+	}
+	
+   
 }

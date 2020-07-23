@@ -7,13 +7,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
-/**
- * Created by sylvester
- * Project Rentals-Booking-System
- * User: sylvester
- * Date: 5/20/20
- * Time: 7:23 PM
- */
 @Configuration
 public class LoggerConfig {
     @Bean

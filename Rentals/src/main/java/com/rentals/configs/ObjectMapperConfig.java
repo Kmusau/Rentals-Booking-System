@@ -8,13 +8,6 @@ import org.springframework.context.annotation.Configuration;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
-/**
- * Created by sylvester
- * Project Rentals-Booking-System
- * User: sylvester
- * Date: 5/20/20
- * Time: 6:56 PM
- */
 @Configuration
 public class ObjectMapperConfig {
     @Bean

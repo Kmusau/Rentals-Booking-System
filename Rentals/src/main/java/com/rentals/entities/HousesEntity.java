@@ -1,83 +1,100 @@
 package com.rentals.entities;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "houses")
 public class HousesEntity {
 
 	@Id
-	@Column(name="idhouse")
-	private int id;
-	@Column(name="name")
-	private String name;
+	@GeneratedValue
+	@Column(name="houseID")
+	private int houseID;
+	
+	@Column(name="houseTypeid")
+	private int houseTypeID;
+	
+	@Column(name="houseNumber")
+	private String houseNumber;
+	
 	@Column(name="location")
 	private String location;
-	@Column(name="distanceKM")
-	private int distance;
-	@Column(name="rent")
-	private float rent;
-	@Column(name="type")
-	private String type;
 	
+	@Column(name="price")
+	private float price;
 	
+	@Column(name="dateCreated")
+	private Date dateCreated;
+	
+	@Column(name="dateModified")
+	private Date dateModified;
+	
+	@Column(name="active")
+	private int active;
+	
+
+
 	public HousesEntity() {
 		super();
 	}
-
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
 	
+	
+	public int getHouseID() {
+		return houseID;
+	}
+	public void setHouseID(int houseID) {
+		this.houseID = houseID;
+	}
+	public int getHouseTypeID() {
+		return houseTypeID;
+	}
+	public void setHouseTypeID(int houseTypeID) {
+		this.houseTypeID = houseTypeID;
+	}
+	public String getHouseNumber() {
+		return houseNumber;
+	}
+	public void setHouseNumber(String houseNumber) {
+		this.houseNumber = houseNumber;
+	}
 	public String getLocation() {
 		return location;
 	}
-
 	public void setLocation(String location) {
 		this.location = location;
 	}
-
-
-	public int getDistance() {
-		return distance;
+	public float getPrice() {
+		return price;
+	}
+	public void setPrice(float price) {
+		this.price = price;
+	}
+	public Date getDateCreated() {
+		return dateCreated;
+	}
+	public void setDateCreated(Date dateCreated) {
+		this.dateCreated = dateCreated;
+	}
+	public Date getDateModified() {
+		return dateModified;
+	}
+	public void setDateModified(Date dateModified) {
+		this.dateModified = dateModified;
+	}
+	
+	public int getActive() {
+		return active;
 	}
 
-	public void setDistance(int distance) {
-		this.distance = distance;
-	}
 
-
-	public float getRent() {
-		return rent;
-	}
-
-	public void setRent(float rent) {
-		this.rent = rent;
-	}
-
-
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
+	public void setActive(int active) {
+		this.active = active;
 	}
 	
 	

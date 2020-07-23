@@ -1,5 +1,6 @@
 package com.rentals.services;
 
+import java.util.Date;
 import java.util.List;
 
 import com.rentals.entities.CustomersEntity;
@@ -18,24 +19,18 @@ public class CustomersService {
 	CustomerRepository customerrepo;
 	
 	public List<CustomersEntity> getAllCustomers() {
-		//logging information
-	/*	logger.debug("debug message for fetching all customers");
-		logger.error("error message for fetching all customers"); */
-		logger.info("info message for fetching all customers");
-	/*	logger.trace("trace message for fetching all customers");
-		logger.warn("debug message for fetching all customers");  */		
+		logger.info("info message for fetching all customers");	
 		return customerrepo.findAll();
 	}
 
 	public void addCustomer(CustomersEntity customer) {
-		//logging information
-	/*	logger.debug("debug message for creating a new customer");
-		logger.error("error message for creating a new customer");  */
 		logger.info("info message for creating a new customer");
-	/*	logger.trace("trace message for creating a new customer");
-		logger.warn("debug message for creating a new customer");	*/	
+		if(customer.getDateCreated() == null) {
+			customer.setDateCreated(new Date());
+		}
 		customerrepo.save(customer);
 	}
+	
 	
 	
 }

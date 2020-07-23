@@ -1,5 +1,6 @@
 package com.rentals.services;
 
+import java.util.Date;
 import java.util.List;
 
 import com.rentals.entities.HousesEntity;
@@ -18,13 +19,15 @@ public class HousesService {
 	HouseRepository houseRepo;
 	
 	public List<HousesEntity> getAllHouses() {
-		//logging information
-	/*	logger.debug("debug message for fetching all houses");
-		logger.error("error message for fetching all houses"); */
 		logger.info("info message for fetching all houses");
-	/*	logger.trace("trace message for fetching all houses");
-		logger.warn("debug message for fetching all houses"); */
 		return houseRepo.findAll();
-		
 	}
+	
+	public void addHouses(HousesEntity houses) {
+		if(houses.getDateCreated() == null) {
+			houses.setDateCreated(new Date());
+		}
+		houseRepo.save(houses);
+	}
+	
 }

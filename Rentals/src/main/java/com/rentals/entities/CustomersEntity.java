@@ -1,7 +1,10 @@
 package com.rentals.entities;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -10,60 +13,103 @@ import javax.persistence.Table;
 public class CustomersEntity {
 
 	@Id
-	@Column(name = "idnumber")
-	private int idnumber;
-	@Column(name = "password")
-	private String password;
-	@Column(name = "email")
-	private String email;
-	@Column(name = "fname")
-	private String fname;
-	@Column(name = "lname")
-	private String lname;
-	@Column(name = "phonenumber")
-	private int phonenumber;
+	@GeneratedValue
+	@Column(name = "customersID")
+	private int customersID;
+	
+	@Column(name = "first_name")
+	private String firstName;
+	
+	@Column(name = "other_names")
+	private String otherNames;
+	
+	@Column(name = "email_address")
+	private String emailAddress;
+	
+	@Column(name = "dateOfBirth")
+	private Date dateOfBirth;
+	
+	@Column(name = "dateCreated")
+	private Date dateCreated;
+	
+	@Column(name = "dateModified")
+	private Date dateModified;
+	
+	@Column(name = "active")
+	private int active;
 	
 	
+
 	public CustomersEntity() {
 		super();
 	}
+
 	
 	
-	public int getIdnumber() {
-		return idnumber;
+	public int getCustomersID() {
+		return customersID;
 	}
-	public void setIdnumber(int idnumber) {
-		this.idnumber = idnumber;
+
+	public void setCustomersID(int customersID) {
+		this.customersID = customersID;
 	}
-	public String getPassword() {
-		return password;
+
+	public String getFirstName() {
+		return firstName;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
-	public String getEmail() {
-		return email;
+
+	public String getOtherNames() {
+		return otherNames;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+
+	public void setOtherNames(String otherNames) {
+		this.otherNames = otherNames;
 	}
-	public String getFname() {
-		return fname;
+
+	public String getEmailAddress() {
+		return emailAddress;
 	}
-	public void setFname(String fname) {
-		this.fname = fname;
+
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
 	}
-	public String getLname() {
-		return lname;
+
+	public Date getDateOfBirth() {
+		return dateOfBirth;
 	}
-	public void setLname(String lname) {
-		this.lname = lname;
+
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
 	}
-	public int getPhonenumber() {
-		return phonenumber;
+
+	public Date getDateCreated() {
+		return dateCreated;
 	}
-	public void setPhonenumber(int phonenumber) {
-		this.phonenumber = phonenumber;
+
+	public void setDateCreated(Date dateCreated) {
+		this.dateCreated = dateCreated;
 	}
+
+	public Date getDateModified() {
+		return dateModified;
+	}
+
+	public void setDateModified(Date dateModified) {
+		this.dateModified = dateModified;
+	}
+
+	public int getActive() {
+		return active;
+	}
+
+	public void setActive(int active) {
+		this.active = active;
+	}
+	
+	
 	
 }
